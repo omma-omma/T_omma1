@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hongsinugget | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -59,51 +62,57 @@
                 <h2 class="section-title">Projects</h2>
                 <div class="grid-container">
                     <div class="project-card">
-                        <div class="project-image-placeholder">💳</div>
+                        <img src="https://www.hongsinugget.dev/images/gimjepay/gimje_1.png" alt="김제페이"
+                            class="project-image">
                         <div class="project-info">
                             <h3>김제페이</h3>
                             <p>일상회복지원금 사용처를 한눈에! 김제시에서 지원하는 일상회복지원금의 사용처를 한눈에 볼수있게 지도서비스를 제작</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('gimjepay')">View More →</span>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image-placeholder">🔮</div>
+                        <img src="https://www.hongsinugget.dev/images/jipyeong/jipyeong_main.png" alt="지평선 전생테스트"
+                            class="project-image">
                         <div class="project-info">
                             <h3>지평선 전생테스트</h3>
                             <p>200년 전으로 돌아가게 된 당신... 5개의 질문을 통해 당신의 전생 모습을 찾아보세요!</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('jipyeong')">View More →</span>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image-placeholder">🎨</div>
+                        <img src="https://www.hongsinugget.dev/images/nullz/nullz_main.png" alt="NULLZ 크리에이터"
+                            class="project-image">
                         <div class="project-info">
                             <h3>NULLZ 크리에이터</h3>
                             <p>Nullz 핫크리에이터 등극 & 널즈(Nulz) 파트너 크리에이터 활동</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('nullz')">View More →</span>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image-placeholder">📢</div>
+                        <img src="https://www.hongsinugget.dev/images/marketer/marketer_main.png" alt="청년마케터 서포터즈"
+                            class="project-image">
                         <div class="project-info">
                             <h3>청년마케터 서포터즈</h3>
                             <p>청년마케터 서포터즈 대외활동</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('marketer')">View More →</span>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image-placeholder">🚀</div>
+                        <img src="https://www.hongsinugget.dev/images/silentmonster/silentmonster_main.png"
+                            alt="SilentMonster" class="project-image">
                         <div class="project-info">
                             <h3>SilentMonster</h3>
                             <p>SilentMonster 창업</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('silentmonster')">View More →</span>
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image-placeholder">🖌️</div>
+                        <img src="https://www.hongsinugget.dev/images/designer/designer_main.png" alt="디자인작업물"
+                            class="project-image">
                         <div class="project-info">
                             <h3>디자인작업물</h3>
                             <p>프리랜서 디자인 작업물</p>
-                            <span class="project-link">View More →</span>
+                            <span class="project-link" onclick="openModal('designer')">View More →</span>
                         </div>
                     </div>
                 </div>
@@ -180,6 +189,16 @@
             <p>&copy; 2025 Hongsinugget. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
